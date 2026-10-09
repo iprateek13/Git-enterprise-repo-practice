@@ -1,0 +1,16 @@
+variable "subscription_id" {
+  description = "Azure subscription ID"
+  type        = string
+}
+
+variable "resource_group_name" {
+  description = "Name of the Azure Resource Group"
+  type        = string
+  default     = "rg-git-interview-lab"
+}
+
+variable "location" {
+  description = "Azure region"
+  type        = string
+  default     = "Central India"
+}
