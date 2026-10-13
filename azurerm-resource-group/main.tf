@@ -1,9 +1,9 @@
-resource "azurerm_resource_group" "lab" {
-  name     = var.resource_group_name
-  location = var.location
 
-  tags = {
-    environment = "practice"
-    managed_by  = "terraform"
-  }
+
+resource "azurerm_resource_group" "this" {
+  for_each = var.resource_groups
+
+  name     = each.value.name
+  location = each.value.location
+
 }
